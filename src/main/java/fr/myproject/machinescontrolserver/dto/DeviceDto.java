@@ -1,10 +1,7 @@
 package fr.myproject.machinescontrolserver.dto;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springdoc.api.AbstractOpenApiResource;
-
 import java.util.Date;
 
 @Data

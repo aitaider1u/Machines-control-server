@@ -2,6 +2,7 @@ package fr.myproject.machinescontrolserver.controller;
 
 
 import fr.myproject.machinescontrolserver.dto.DeviceDto;
+import fr.myproject.machinescontrolserver.dto.UsageHistoryDto;
 import fr.myproject.machinescontrolserver.model.UsageHistory;
 import fr.myproject.machinescontrolserver.service.DeviceService;
 import fr.myproject.machinescontrolserver.service.UsageHistoryService;
@@ -28,15 +29,8 @@ public class UsageHistoryController {
     }
 
     @GetMapping("/{deviceId}")
-    public ResponseEntity<List<UsageHistory>> getAllUsageHistoryOfADevice(@PathVariable String deviceId){
-        return  ResponseEntity.ok().body(usageHistoryService.getUsageHistoryOfADevice(Long.parseLong(deviceId)).stream().map(device -> modelMapper.map(device, UsageHistory.class)).collect(Collectors.toList()));
+    public ResponseEntity<List<UsageHistoryDto>> getAllUsageHistoryOfADevice(@PathVariable String deviceId){
+        return  ResponseEntity.ok().body(usageHistoryService.getUsageHistoryOfADevice(Long.parseLong(deviceId)).stream().map(usageHistory -> modelMapper.map(usageHistory, UsageHistoryDto.class)).collect(Collectors.toList()));
     }
-
-    @GetMapping("/toto")
-    public ResponseEntity<String> toto(){
-        return  ResponseEntity.ok().body("toto");
-    }
-
-
 
 }
