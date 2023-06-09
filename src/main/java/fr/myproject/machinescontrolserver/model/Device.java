@@ -1,5 +1,6 @@
 package fr.myproject.machinescontrolserver.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,15 +30,14 @@ public class Device {
     @Column(name = "isOn")
     private boolean isOn;
 
-
     @Column(name = "launchedAt")
     private Date launchedAt;
-
 
     @Column(name = "operatingTime")
     private long operatingTime;
 
     @OneToMany(mappedBy="device")
+    @JsonManagedReference
     private List<UsageHistory> usageHistories;
 
 }

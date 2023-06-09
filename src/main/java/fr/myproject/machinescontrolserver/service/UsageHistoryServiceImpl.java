@@ -15,7 +15,7 @@ import java.util.List;
 public class UsageHistoryServiceImpl implements UsageHistoryService{
 
     private final UsageHistoryRepository usageHistoryRepository;
-    private DeviceService deviceService;
+    private final DeviceService deviceService;
 
     public UsageHistoryServiceImpl(UsageHistoryRepository usageHistoryRepository, DeviceServiceImpl deviceService) {
         this.usageHistoryRepository = usageHistoryRepository;

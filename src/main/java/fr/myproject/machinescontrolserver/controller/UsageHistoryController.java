@@ -16,15 +16,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api/usageHistory")
+@RequestMapping("api/usageHistory")
 public class UsageHistoryController {
     private final ModelMapper modelMapper;
-    private final DeviceService deviceService;
     private final UsageHistoryService usageHistoryService;
 
-    public UsageHistoryController(DeviceService deviceService, ModelMapper modelMapper,UsageHistoryService usageHistoryService) {
+    public UsageHistoryController(ModelMapper modelMapper,UsageHistoryService usageHistoryService) {
         super();
-        this.deviceService = deviceService;
         this.modelMapper = modelMapper;
         this.usageHistoryService =  usageHistoryService;
     }
@@ -33,6 +31,12 @@ public class UsageHistoryController {
     public ResponseEntity<List<UsageHistory>> getAllUsageHistoryOfADevice(@PathVariable String deviceId){
         return  ResponseEntity.ok().body(usageHistoryService.getUsageHistoryOfADevice(Long.parseLong(deviceId)).stream().map(device -> modelMapper.map(device, UsageHistory.class)).collect(Collectors.toList()));
     }
+
+    @GetMapping("/toto")
+    public ResponseEntity<String> toto(){
+        return  ResponseEntity.ok().body("toto");
+    }
+
 
 
 }

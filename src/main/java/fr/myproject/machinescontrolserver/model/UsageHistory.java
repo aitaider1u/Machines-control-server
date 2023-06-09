@@ -1,5 +1,6 @@
 package fr.myproject.machinescontrolserver.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,6 +29,7 @@ public class UsageHistory {
 
     @ManyToOne
     @JoinColumn(name="deviceId", nullable=false)
+    @JsonBackReference
     private Device device;
     
 }
