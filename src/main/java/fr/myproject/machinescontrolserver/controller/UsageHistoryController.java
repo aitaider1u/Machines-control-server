@@ -1,10 +1,5 @@
 package fr.myproject.machinescontrolserver.controller;
-
-
-import fr.myproject.machinescontrolserver.dto.DeviceDto;
 import fr.myproject.machinescontrolserver.dto.UsageHistoryDto;
-import fr.myproject.machinescontrolserver.model.UsageHistory;
-import fr.myproject.machinescontrolserver.service.DeviceService;
 import fr.myproject.machinescontrolserver.service.UsageHistoryService;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.ResponseEntity;

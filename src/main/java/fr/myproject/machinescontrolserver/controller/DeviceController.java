@@ -1,14 +1,12 @@
 package fr.myproject.machinescontrolserver.controller;
 
-
-import fr.myproject.machinescontrolserver.dto.DeviceDto;
+import fr.myproject.machinescontrolserver.dto.deviceDto.DeviceDto;
 import fr.myproject.machinescontrolserver.model.Device;
 import fr.myproject.machinescontrolserver.service.DeviceService;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -44,7 +42,6 @@ public class DeviceController {
         // convert DTO to entity
         Device deviceRequest = modelMapper.map(deviceDto, Device.class);
         Device device = deviceService.updateDevice(id,deviceRequest);
-
         // convert entity to DTO
         DeviceDto deviceResponse = modelMapper.map(device, DeviceDto.class);
         return ResponseEntity.ok().body(deviceResponse);

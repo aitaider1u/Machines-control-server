@@ -1,4 +1,4 @@
-package fr.myproject.machinescontrolserver.dto;
+package fr.myproject.machinescontrolserver.dto.deviceDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

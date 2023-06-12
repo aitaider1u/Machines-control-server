@@ -9,7 +9,6 @@ import fr.myproject.machinescontrolserver.repository.UsageHistoryRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
-import java.util.EnumMap;
 import java.util.List;
 
 @Service
