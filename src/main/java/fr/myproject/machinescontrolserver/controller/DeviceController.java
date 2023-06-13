@@ -34,7 +34,7 @@ public class DeviceController {
         Device device = deviceService.createDevice(deviceRequest);
         // convert entity to DTO
         DeviceDto deviceResponse = modelMapper.map(device, DeviceDto.class);
-        return ResponseEntity.created(null).body(deviceResponse);
+        return ResponseEntity.ok().body(deviceResponse);
     }
 
     @RequestMapping(method = RequestMethod.PUT , value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)

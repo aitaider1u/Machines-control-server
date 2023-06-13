@@ -6,7 +6,6 @@ import fr.myproject.machinescontrolserver.exception.roleException.RoleExistYetEx
 import fr.myproject.machinescontrolserver.model.Role;
 import fr.myproject.machinescontrolserver.service.RoleService;
 import org.modelmapper.ModelMapper;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

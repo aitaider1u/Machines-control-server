@@ -1,21 +1,13 @@
 package fr.myproject.machinescontrolserver.controller;
 
-import fr.myproject.machinescontrolserver.dto.deviceDto.DeviceDto;
 import fr.myproject.machinescontrolserver.dto.userDto.UserCreationDto;
 import fr.myproject.machinescontrolserver.dto.userDto.UserDto;
 import fr.myproject.machinescontrolserver.exception.userException.UserNotFoundException;
-import fr.myproject.machinescontrolserver.model.Device;
-import fr.myproject.machinescontrolserver.model.Role;
 import fr.myproject.machinescontrolserver.model.UserEntity;
-import fr.myproject.machinescontrolserver.service.DeviceService;
 import fr.myproject.machinescontrolserver.service.UserService;
-import org.apache.catalina.User;
-import org.apache.catalina.UserDatabase;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

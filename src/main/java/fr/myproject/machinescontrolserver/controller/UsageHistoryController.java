@@ -19,8 +19,10 @@ public class UsageHistoryController {
 
     public UsageHistoryController(ModelMapper modelMapper,UsageHistoryService usageHistoryService) {
         super();
+
         this.modelMapper = modelMapper;
         this.usageHistoryService =  usageHistoryService;
+        
     }
 
     @GetMapping("/{deviceId}")
